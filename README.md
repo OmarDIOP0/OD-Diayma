@@ -34,3 +34,31 @@ Sum(x => x.Product.Price * x.Quantity)
 
 Le calcul doit être revu pour garantir un total correct en fonction des quantités.
 
+Voici la **version corrigée, claire et professionnelle**, adaptée à un fichier **README.md** :
+
+---
+
+## 5. Quels sont les namespaces, classes et méthodes visités avant l’affichage des produits sur l’écran d’accueil de votre navigateur, en mode “Pas à pas détaillé” ?
+
+En mode *Pas à pas détaillé*, voici les éléments parcourus avant l’affichage de la page des produits :
+
+1. **Namespace : `P2FixAnAppDotNetCode`**
+
+   * **Classe : `Startup`**
+   * **Méthode : `Startup()`** (appel au constructeur de configuration)
+
+   C’est le premier point d’entrée chargé par l’application lors de l’initialisation.
+
+2. **Namespace : `P2FixAnAppDotNetCode.Controllers`**
+
+   * **Classe : `ProductController`**
+   * **Constructeur : `ProductController(IProductService productService)`**
+
+   Visual Studio entre dans ce contrôleur pour préparer les dépendances nécessaires, notamment `_productService`.
+
+3. **Namespace : `P2FixAnAppDotNetCode.Components`**
+
+   * **Classe : `CartSummaryViewComponent`**
+   * **Méthode : `CartSummaryViewComponent()`** (constructeur)
+
+   Ce composant est appelé lors du rendu de la page d’accueil afin d’afficher le résumé du panier.
